@@ -16,6 +16,14 @@ npm run build
 ```
 
 ## 使用
+
+
+``` bash
+#依赖于chimee-mobile-player
+npm install chimee-mobile-player --save
+#将chimee-plugin-mobile-controlbar/lib中的index.browser.js替换为in-chimee-player/static/js中的index.browser.js
+```
+
 ``` bash
 <inPlayer 
     :inTitle="videoTitle"       #视频标题,String
