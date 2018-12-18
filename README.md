@@ -13,18 +13,51 @@ npm run dev
 
 # build for production with minification
 npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-
-# run unit tests
-npm run unit
-
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## 使用
+``` bash
+<inPlayer 
+    :inTitle="videoTitle"       #视频标题,String
+    :inVideoSrc="videoSrc"      #视频地址,String
+    :inVideoBg="videoBg"        #视频预览图,String(可选)
+    :inHasNav="hasNav"          #是否需要视频切换菜单,Boolean
+    :inNavList="btnList"        #视频切换菜单数组,Array(inHasNav为true时必需)
+    @inVideoRequt="videoRequt"  #当前视频第一次观看结束时回调，记录该视频的观看状态(inHasNav为true时必需)
+></inPlayer>
+```
+``` bash
+    data () {
+        return {
+            videoTitle:'',
+            videoSrc:'',
+            videoBg:'',
+            hasNav:true,
+            btnList:[],
+        }
+    },
+    mounted:function() {
+        if(this.hasNav){ 
+            this.btnList=[
+                {
+                    name:'nav1',     #菜单名,String
+                    isRead:true,     #该视频观看状态,Boolean（后台记录，是否已经观看完成）
+                    videoUrl:'',     #视频地址,String               
+                },
+                {
+                    name:'nav2',
+                    isRead:false,
+                    videoUrl:'',
+                },
+                ...
+            ]
+            this.videoSrc=this.btnList[0].videoUrl;
+        }
+       
+    },
+    methods: {
+        videoRequt(index){
+            console.log(index)
+        },
+    }
+```
