@@ -34,22 +34,22 @@ export default {
                 {
                     name:'nav1',
                     isRead:isReadArr[0],
-                    videoUrl:'https://vjs.zencdn.net/v/oceans.mp4',
+                    videoUrl:'https://chimee.org/vod/1.mp4',
                 },
                 {
                     name:'nav2',
                     isRead:isReadArr[1],
-                    videoUrl:'https://chimee.org/vod/1.mp4',
+                    videoUrl:'https://chimee.org/vod/2.mp4',
                 },
                 {
                     name:'nav3',
                     isRead:isReadArr[2],
-                    videoUrl:'https://chimee.org/vod/2.mp4',
+                    videoUrl:'https://vjs.zencdn.net/v/oceans.mp4',
                 },
             ]
             this.videoSrc=this.btnList[0].videoUrl;
         }else{   //导读视频
-            this.videoSrc='https://vjs.zencdn.net/v/oceans.mp4';
+            this.videoSrc='https://chimee.org/vod/1.mp4';
         }      
   },
   mounted:function() {

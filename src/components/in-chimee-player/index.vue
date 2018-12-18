@@ -130,6 +130,7 @@ export default {
             that.toolsShow=false;
         })
         this.inCPlayer.$on('ended', function () {
+            console.log('结束')
            that.inVideoEnd();
         })
         this.sizeSetUp();
@@ -167,7 +168,7 @@ export default {
     },
     /* 播放结束 */
     inVideoEnd(){
-        if(this.hasNav){
+        if(this.inHasNav){
             if(!this.inNavList[this.inNavIndex].isRead){
                 // this.inVideoRequt(this.inNavIndex+1);
                 this.$emit('inVideoRequt', this.inNavIndex+1)

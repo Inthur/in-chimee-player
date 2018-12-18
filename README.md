@@ -1,4 +1,4 @@
-# in-player
+# in-chimee-player
 
 > A Vue.js project
 
