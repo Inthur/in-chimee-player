@@ -16,8 +16,10 @@ npm run build
 ```
 
 ## 使用
-
-
+``` bash
+#将组件in-chimee-player拷贝到自己的项目中，引入
+import inPlayer from '@/components/in-chimee-player/index'
+```
 ``` bash
 #依赖于chimee-mobile-player
 npm install chimee-mobile-player --save
