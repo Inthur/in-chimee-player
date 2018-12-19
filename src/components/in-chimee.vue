@@ -1,5 +1,5 @@
 <template>
-    <div class="player">
+    <div class="player" style="width:100%;height:100%;overflow:hidden;">
         <inPlayer :inTitle="videoTitle" :inVideoSrc="videoSrc" :inVideoBg="videoBg" :inHasNav="hasNav" :inNavList="btnList" @inVideoRequt="videoRequt"></inPlayer>
         <!--<ul class="action-btnlist">
             <li v-for="(btn,index) in btnList" :key="index">{{btn.name}}</li>
@@ -67,3 +67,14 @@ export default {
 
 }
 </script>
+<style>
+html,
+body,
+#app{
+    width: 100%;
+    height: 100%;
+}
+body{
+    font-family: '微软雅黑', 'Microsoft Yahei', 'Hiragino Sans GB', '宋体', Helvetica, STHeiti, Arial, sans-serif;  
+}
+</style>

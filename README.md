@@ -14,8 +14,13 @@ npm run dev
 # build for production with minification
 npm run build
 ```
+## 功能
+用于app内部的h5横屏播放器
+1.普通横屏播放器
+2.带视频切换菜单的横屏播放器，并且记录视频观看状态，带观看结束动画
 
 ## 使用
+
 ``` bash
 #将组件in-chimee-player拷贝到自己的项目中，引入
 import inPlayer from '@/components/in-chimee-player/index'
@@ -27,14 +32,16 @@ npm install chimee-mobile-player --save
 ```
 
 ``` bash
-<inPlayer 
-    :inTitle="videoTitle"       #视频标题,String
-    :inVideoSrc="videoSrc"      #视频地址,String
-    :inVideoBg="videoBg"        #视频预览图,String(可选)
-    :inHasNav="hasNav"          #是否需要视频切换菜单,Boolean
-    :inNavList="btnList"        #视频切换菜单数组,Array(inHasNav为true时必需)
-    @inVideoRequt="videoRequt"  #当前视频第一次观看结束时回调，记录该视频的观看状态(inHasNav为true时必需)
-></inPlayer>
+<div id="player" style="width:100%;height:100%;overflow:hidden;">
+    <inPlayer 
+        :inTitle="videoTitle"       #视频标题,String
+        :inVideoSrc="videoSrc"      #视频地址,String
+        :inVideoBg="videoBg"        #视频预览图,String(可选)
+        :inHasNav="hasNav"          #是否需要视频切换菜单,Boolean
+        :inNavList="btnList"        #视频切换菜单数组,Array(inHasNav为true时必需)
+        @inVideoRequt="videoRequt"  #当前视频第一次观看结束时回调，记录该视频的观看状态(inHasNav为true时必需)
+    ></inPlayer>
+</div>
 ```
 ``` bash
     data () {

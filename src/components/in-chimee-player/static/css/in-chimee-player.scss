@@ -56,13 +56,6 @@
     outline: 0;
     border: 0;
     background-size: 100% 100%;
-    -webkit-touch-callout:none;
-    -webkit-user-select:none;
-    -khtml-user-select:none;
-    -moz-user-select:none;
-    -ms-user-select:none;
-    user-select:none;/*禁用手机浏览器的用户选择功能 */
-    -webkit-tap-highlight-color: transparent;  /*手机端点击时出现的阴影*/
 }
 .clearfix:after{
     content:"\20";
@@ -96,9 +89,6 @@ textarea {
     outline: 0;
     -webkit-tap-highlight-color: transparent;
 }
-body {
-    font-family: '微软雅黑', 'Microsoft Yahei', 'Hiragino Sans GB', '宋体', Helvetica, STHeiti, Arial, sans-serif;  
-}
 .left{
 	float: left;
 }
@@ -107,11 +97,6 @@ body {
 }
 h2,h3,h4,h5,h6{
     font-weight: normal;
-}
-html,
-body,
-#app{
-	@include elementSize(100%,100%);
 }
 
 // 公用遮罩
@@ -227,11 +212,18 @@ body,
 		@include transformRotate(360deg,50%,50%)
 	}
 }
-.player{
-	@include elementSize(100%,100%);
-	overflow: hidden;
-}
+// .player{
+// 	@include elementSize(100%,100%);
+// 	overflow: hidden;
+// }
 .in-chimee-player{
+    -webkit-touch-callout:none;
+    -webkit-user-select:none;
+    -khtml-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;/*禁用手机浏览器的用户选择功能 */
+    -webkit-tap-highlight-color: transparent;  /*手机端点击时出现的阴影*/
     @include elementSize(100%,100%);
     overflow: hidden;
     position: relative;
