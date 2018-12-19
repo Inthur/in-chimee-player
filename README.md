@@ -14,10 +14,13 @@ npm run dev
 # build for production with minification
 npm run build
 ```
+
 ## 功能
+``` bash
 用于app内部的h5横屏播放器
 1.普通横屏播放器
 2.带视频切换菜单的横屏播放器，并且记录视频观看状态，带观看结束动画
+```
 
 ## 使用
 
