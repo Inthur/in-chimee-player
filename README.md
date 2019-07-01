@@ -84,6 +84,8 @@ npm install chimee-mobile-player --save
 
 
 ## 补充
+
+``` bash
 兼容低版本ios进度条问题：chimee-control-wrap的flex布局问题，
   chimee-control-wrap{
     display: box;
@@ -93,3 +95,5 @@ npm install chimee-mobile-player --save
     display:-webkit-flex; /* Chrome */
     display: flex;
   }
+  
+```
