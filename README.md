@@ -89,10 +89,10 @@ npm install chimee-mobile-player --save
 兼容低版本ios进度条问题：chimee-control-wrap的flex布局问题，
   chimee-control-wrap{
     display: box;
-    display:-webkit-box;  /* iOS 6-, Safari 3.1-6 */
-    display:-moz-box;     /* Firefox 19 */
+    display:-webkit-box;  # iOS 6-, Safari 3.1-6 
+    display:-moz-box;     # Firefox 19 
     display:-ms-flexbox;
-    display:-webkit-flex; /* Chrome */
+    display:-webkit-flex; # Chrome 
     display: flex;
   }
   
